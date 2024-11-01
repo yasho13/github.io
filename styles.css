@@ -1,29 +1,42 @@
+/* Basic reset and styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background: #121212;
+    background-color: #121212;
     color: #e0e0e0;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .container {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 20px;
+    color: #f0f0f0;
 }
 
-header {
+/* Hero Section */
+.hero-section {
     text-align: center;
-    padding: 20px;
+    padding: 100px 0;
+    animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
     font-size: 3em;
     color: #00ffcc;
+    margin-bottom: 10px;
+    animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 header p {
@@ -31,6 +44,23 @@ header p {
     color: #00cccc;
 }
 
+header button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    background: transparent;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+header button:hover {
+    color: #121212;
+    background-color: #00ffcc;
+}
+
+/* Sections */
 section {
     margin: 20px 0;
 }
@@ -41,16 +71,8 @@ h2 {
     margin-bottom: 10px;
 }
 
-.experience-item, ul {
-    margin: 10px 0;
-    color: #b0b0b0;
-}
-
-a {
-    color: #00ffcc;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #00cccc;
+/* Animations */
+@keyframes glow {
+    from { text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc; }
+    to { text-shadow: 0 0 20px #00cccc, 0 0 30px #00cccc, 0 0 40px #00cccc; }
 }
